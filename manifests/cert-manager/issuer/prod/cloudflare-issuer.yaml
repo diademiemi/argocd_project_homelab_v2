@@ -4,6 +4,8 @@ metadata:
   name: blahaj-issuer
 spec:
   acme:
+    email: "letsencrypt.org@blahaj.sh"
+    server: https://acme-v02.api.letsencrypt.org/directory
     solvers:
     - dns01:
         cloudflare:
