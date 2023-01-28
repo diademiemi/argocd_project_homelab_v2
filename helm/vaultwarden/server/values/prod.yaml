@@ -3,6 +3,10 @@ ingress:
   hostname: vault.blahaj.sh
   class: traefik
   tls: true
+  tlsSecret: vaultwarden-cert
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.tls: "true"
 
 storage:
   enabled: true
@@ -20,3 +24,5 @@ smtp:
   host: blahaj.sh
   from: no-reply@blahaj.sh
   fromName: "Vaultwarden"
+
+adminToken: "INITIAL_TOKEN_CHANGE_IN_UI" # For the love of god, change this in the UI.
