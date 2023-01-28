@@ -7,7 +7,7 @@ ingress:
 storage:
   enabled: true
   size: 10Gi
-  class: longhorn
+  class: longhorn-replicated
 
 webVaultEnabled: true
 
