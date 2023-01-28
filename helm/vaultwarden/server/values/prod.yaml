@@ -1,0 +1,15 @@
+ingress:
+  enabled: true
+  hostname: vault.blahaj.sh
+  class: traefik
+  tls: true
+
+storage:
+  enabled: true
+  size: 10Gi
+  class: longhorn
+
+webVaultEnabled: true
+
+signupDomains: ["blahaj.sh"]
+signupsVerify: false

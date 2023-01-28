@@ -1,0 +1,3 @@
+[submodule "helm/vaultwarden/server/chart"]
+	path = helm/vaultwarden/server/chart
+	url = https://github.com/guerzon/vaultwarden.git
