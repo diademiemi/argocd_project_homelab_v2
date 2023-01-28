@@ -13,3 +13,5 @@ webVaultEnabled: true
 
 signupDomains: ["blahaj.sh"]
 signupsVerify: false
+
+domain: https://vault.blahaj.sh
