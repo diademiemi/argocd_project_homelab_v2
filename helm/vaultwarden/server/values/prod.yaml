@@ -15,3 +15,8 @@ signupDomains: ["blahaj.sh"]
 signupsVerify: false
 
 domain: https://vault.blahaj.sh
+
+smtp:
+  host: blahaj.sh
+  from: no-reply@blahaj.sh
+  fromName: "Vaultwarden"
