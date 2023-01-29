@@ -1,28 +1,30 @@
-ingress:
-  enabled: true
-  hostname: vault.blahaj.sh
-  class: traefik
-  tls: true
-  tlsSecret: vaultwarden-cert
-  annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: websecure
-    traefik.ingress.kubernetes.io/router.tls: "true"
+vaultwarden:
+  env:
+    SIGNUPS_ALLOWED: true
+    INVITATIONS_ALLOWED: true
+    DOMAIN: https://vault.blahaj.sh
+    SMTP_HOST: blahaj.sh
+    SMTP_FROM: no-reply@blahaj.sh
+    WEB_VAULT_ENABLED: true
 
-storage:
-  enabled: true
-  size: 10Gi
-  class: longhorn-replicated
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: traefik
+      traefik.ingress.kubernetes.io/router.entrypoints: websecure
+      traefik.ingress.kubernetes.io/router.tls: "true"
+    path: /
+    hosts:
+      - vault.blahaj.sh
+    tls:
+      - secretName: vaultwarden-cert
+        hosts:
+          - vault.blahaj.sh
+    pathType: Prefix
 
-webVaultEnabled: true
-
-signupDomains: ["blahaj.sh"]
-signupsVerify: false
-
-domain: https://vault.blahaj.sh
-
-smtp:
-  host: blahaj.sh
-  from: no-reply@blahaj.sh
-  fromName: "Vaultwarden"
-
-adminToken: "INITIAL_TOKEN_CHANGE_IN_UI" # For the love of god, change this in the UI.
+  persistence:
+    enabled: false
+    accessMode: ReadWriteOnce
+    size: 3200Mi
+    storageClass: longhorn-replicated
+    #existingClaim: "bitwarden-pvc"
