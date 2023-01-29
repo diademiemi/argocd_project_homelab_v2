@@ -17,7 +17,7 @@ vaultwarden:
     hosts:
       - vault.blahaj.sh
     tls:
-      - secretName: vaultwarden-cert
+      - secretName: vaultwarden-blahaj-cert
         hosts:
           - vault.blahaj.sh
     pathType: Prefix
