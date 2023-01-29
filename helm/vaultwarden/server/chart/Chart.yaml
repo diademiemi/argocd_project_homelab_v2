@@ -1,0 +1,12 @@
+apiVersion: v2
+name: vaultwarden
+description: Vaultwarden
+type: application
+version: 0.1.7
+appVersion: "1.1"
+
+dependencies:
+  - name: vaultwarden
+    repository: https://constin.github.io/vaultwarden-helm/
+    version: 1.4.0
+    alias: vaultwarden
