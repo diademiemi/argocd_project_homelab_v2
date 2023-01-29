@@ -8,5 +8,5 @@ appVersion: "1.1"
 dependencies:
   - name: vaultwarden
     repository: https://constin.github.io/vaultwarden-helm/
-    version: 1.4.0
+    version: 0.1.7
     alias: vaultwarden

@@ -1,6 +1,6 @@
 dependencies:
-- name: longhorn
-  repository: https://charts.longhorn.io
-  version: 1.4.0
-digest: sha256:af8938f8a60426d284c9ade236db618c03c8c1633b7be9871012de6cd846deda
-generated: "2023-01-18T16:09:56.339343601+01:00"
+- name: vaultwarden
+  repository: https://constin.github.io/vaultwarden-helm/
+  version: 0.1.7
+digest: sha256:e6a72e95686a8a45513187d98cebbe36bdbd01913db16acfa754bf9aad95cd48
+generated: "2023-01-29T01:17:02.452309355+01:00"
