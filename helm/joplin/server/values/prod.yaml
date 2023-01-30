@@ -1,0 +1,39 @@
+joplin-server:
+  ingress:
+    enabled: true
+    className: "traefik"
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        kubernetes.io/tls-acme: "false"
+        traefik.ingress.kubernetes.io/router.entrypoints: websecure
+        traefik.ingress.kubernetes.io/router.tls: "true"
+    hosts:
+      - host: notes.blahaj.sh
+        paths:
+          - path: /
+            pathType: Prefix
+    tls:
+    - secretName: notes-blahaj-cert
+      hosts:
+        - notes.blahaj.sh
+
+  env:
+    APP_BASE_URL: https://notes.blahaj.sh
+    APP_PORT: 443
+    DB_CLIENT: pg
+    POSTGRES_PASSWORD: joplin
+    POSTGRES_USER: joplin
+    POSTGRES_DATABASE: joplin
+    POSTGRES_HOST: postgres-postgres
+    POSTGRES_PORT: 5432
+
+  postgres:
+    env:
+      POSTGRES_PASSWORD: joplin
+      POSTGRES_USER: joplin
+      POSTGRES_DB: joplin
+    persistence:
+      enabled: true
+      accessMode: ReadWriteOnce
+      size: 6400Mi
+      storageClass: longhorn-replicated
