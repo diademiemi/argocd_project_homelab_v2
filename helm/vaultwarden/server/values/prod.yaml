@@ -1,4 +1,9 @@
 vaultwarden:
+  image:
+    repository: vaultwarden/server
+    tag: latest
+    pullPolicy: IfNotPresent
+
   env:
     SIGNUPS_ALLOWED: true
     INVITATIONS_ALLOWED: true
