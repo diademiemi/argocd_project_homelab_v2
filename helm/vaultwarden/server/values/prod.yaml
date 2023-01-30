@@ -30,7 +30,7 @@ vaultwarden:
     pathType: Prefix
 
   persistence:
-    enabled: false
+    enabled: true
     accessMode: ReadWriteOnce
     size: 3200Mi
     storageClass: longhorn-replicated
