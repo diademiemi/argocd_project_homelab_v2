@@ -5,12 +5,13 @@ vaultwarden:
     pullPolicy: IfNotPresent
 
   env:
-    SIGNUPS_ALLOWED: true
+    SIGNUPS_ALLOWED: false
     INVITATIONS_ALLOWED: true
     DOMAIN: https://vault.blahaj.sh
     SMTP_HOST: blahaj.sh
     SMTP_FROM: no-reply@blahaj.sh
     WEB_VAULT_ENABLED: true
+    ADMIN_TOKEN: "INITIAL_TOKEN_CHANGE_IN_UI"
 
   ingress:
     enabled: true
