@@ -1,7 +1,7 @@
 vaultwarden:
   image:
     repository: vaultwarden/server
-    tag: latest
+    tag: testing
     pullPolicy: IfNotPresent
 
   env:
