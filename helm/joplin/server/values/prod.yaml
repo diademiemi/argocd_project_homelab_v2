@@ -18,7 +18,7 @@ joplin-server:
 
   env:
     APP_BASE_URL: https://notes.blahaj.sh:443
-    APP_PORT: 22300
+    APP_PORT: 8080
     DB_CLIENT: pg
     POSTGRES_PASSWORD: joplin
     POSTGRES_USER: joplin

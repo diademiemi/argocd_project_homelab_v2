@@ -2,9 +2,9 @@ apiVersion: v2
 name: Joplin Server
 description: Joplin Server Helm Chart
 type: application
-version: 0.2.1
+version: 0.2.2
 
 dependencies:
   - name: joplin-server
     repository: https://diademiemi.github.io/charts
-    version: 0.2.1
+    version: 0.2.2
