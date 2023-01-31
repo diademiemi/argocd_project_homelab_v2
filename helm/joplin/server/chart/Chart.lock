@@ -1,6 +1,6 @@
 dependencies:
 - name: joplin-server
   repository: https://diademiemi.github.io/charts
-  version: 0.2.0
-digest: sha256:bbdbc61ade91a5309a555a78737acfed79b9ceb528432f34449a27f36ab9896b
-generated: "2023-01-31T01:24:06.360607695+01:00"
+  version: 0.2.1
+digest: sha256:7130abb304ec85902952917de97cffc71450238201ed0c4da5ce03f23eb694e4
+generated: "2023-01-31T01:30:59.049496784+01:00"

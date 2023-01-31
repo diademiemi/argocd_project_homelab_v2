@@ -36,3 +36,4 @@ joplin-server:
       accessMode: ReadWriteOnce
       size: 6400Mi
       storageClass: longhorn-replicated
+      mountPath: /var/lib/postgresql
