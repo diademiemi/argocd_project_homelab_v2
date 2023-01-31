@@ -3,7 +3,7 @@ name: gitlab
 description: GitLab Helm Chart
 type: application
 version: 6.8.1
-appVersion: master
+appVersion: "15.9"
 
 dependencies:
   - name: gitlab
