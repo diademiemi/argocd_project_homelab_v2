@@ -37,17 +37,11 @@ gitlab:
         storageClass: longhorn-cloud
 
   postgresql:
-    primary:
+    # # The chart is not up to date, the documentation is wrong :)
+    # https://github.com/bitnami/charts/blob/09ba1564fed3df4f1d94518edcb58aab1f75c827/bitnami/postgresql/templates/statefulset.yaml
+    master:
       nodeSelector:
         location: "cloud"
-      affinity:
-        requiredDuringSchedulingIgnoredDuringExecution:
-          nodeSelectorTerms:
-            - matchExpressions:
-                - key: location
-                  operator: In
-                  values:
-                    - cloud
       persistence:
         storageClass: longhorn-cloud
 
