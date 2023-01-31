@@ -23,7 +23,7 @@ joplin-server:
     POSTGRES_PASSWORD: joplin
     POSTGRES_USER: joplin
     POSTGRES_DATABASE: joplin
-    POSTGRES_HOST: postgres-postgres
+    POSTGRES_HOST: helm-joplin-server-postgres
     POSTGRES_PORT: 5432
 
   postgres:
