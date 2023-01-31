@@ -35,10 +35,11 @@ gitlab:
         storageClass: longhorn-cloud
 
   postgresql:
-    nodeSelector:
-      location: "cloud"
-    persistence:
-      storageClass: longhorn-cloud
+    primary:
+      nodeSelector:
+        location: "cloud"
+      persistence:
+        storageClass: longhorn-cloud
 
   minio:
     nodeSelector:
