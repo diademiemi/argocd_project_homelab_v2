@@ -15,7 +15,7 @@ global:
 
 gitlab:
   certmanager:
-  install: false
+    install: false
 
   nginx-ingress:
     controller:
