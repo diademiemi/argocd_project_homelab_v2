@@ -13,6 +13,9 @@ global:
       secretName: gitlab-wildcard-cert
     configureCertmanager: false
 
+  nodeSelector:
+    location: "cloud"
+
 gitlab:
   upgradeCheck:
     enabled: false
@@ -32,15 +35,21 @@ gitlab:
         storageClass: longhorn-cloud
 
   postgresql:
+    nodeSelector:
+      location: "cloud"
     persistence:
-      storageClass: longhorn-clou
+      storageClass: longhorn-cloud
 
   minio:
+    nodeSelector:
+      location: "cloud"
     persistence:
       storageClass: longhorn-cloud
 
   redis:
     master:
+      nodeSelector:
+        location: "cloud"
       persistence:
         storageClass: longhorn-cloud
 
