@@ -40,10 +40,11 @@ gitlab:
         location: "cloud"
       persistence:
         storageClass: longhorn-cloud
-    nodeSelector:
-      location: "cloud"
-    persistence:
-      storageClass: longhorn-cloud
+    readReplicas:
+      nodeSelector:
+        location: "cloud"
+      persistence:
+        storageClass: longhorn-cloud
 
   minio:
     nodeSelector:
