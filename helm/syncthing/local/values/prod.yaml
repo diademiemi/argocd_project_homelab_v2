@@ -8,10 +8,10 @@ syncthing:
       port: 22000
     udp:
       type: LoadBalancer # Change to LoadBalancer if you want to expose the service
-      port: 22000/udp
+      port: 22000
     discovery:
       type: LoadBalancer # Change to LoadBalancer if you want to expose the service
-      port: 21027/udp
+      port: 21027
 
   nodeSelector:
     location: "local"
