@@ -1,6 +1,6 @@
 dependencies:
 - name: syncthing
   repository: https://diademiemi.github.io/charts
-  version: 0.1.0
-digest: sha256:84feeaaeab8277876d6d513951ae9612d73e4df2f79e7a039dea82859346e1d9
-generated: "2023-02-01T12:41:47.772120849+01:00"
+  version: 0.1.1
+digest: sha256:89f6e27e883e2215a1b2f5e680e011341a7f2283029882f5c16c9fa0ce8142ea
+generated: "2023-02-01T12:59:32.212164772+01:00"
