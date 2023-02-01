@@ -1,0 +1,28 @@
+syncthing:
+  service:
+    web:
+      type: ClusterIP
+      port: 8384
+    tcp:
+      type: LoadBalancer # Change to LoadBalancer if you want to expose the service
+      port: 22000
+    udp:
+      type: LoadBalancer # Change to LoadBalancer if you want to expose the service
+      port: 22000/udp
+    discovery:
+      type: LoadBalancer # Change to LoadBalancer if you want to expose the service
+      port: 21027/udp
+
+  nodeSelector:
+    location: "local"
+  
+  persistence:
+    enabled: true
+    storageClass: "longhorn-local"
+    accessMode: ReadWriteOnce
+    size: 2Gi
+    mountPath: /var/syncthing
+    extraVolumes:
+      - name: files
+        mountPath: /mnt/files
+        existingClaim: "syncthing-files"
