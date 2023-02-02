@@ -4,13 +4,13 @@ syncthing:
       type: ClusterIP
       port: 8384
     tcp:
-      type: LoadBalancer # Change to LoadBalancer if you want to expose the service
+      type: NodePort # Change to LoadBalancer if you want to expose the service
       port: 22000
     udp:
-      type: LoadBalancer # Change to LoadBalancer if you want to expose the service
+      type: NodePort # Change to LoadBalancer if you want to expose the service
       port: 22000
     discovery:
-      type: LoadBalancer # Change to LoadBalancer if you want to expose the service
+      type: NodePort # Change to LoadBalancer if you want to expose the service
       port: 21027
 
   nodeSelector:
