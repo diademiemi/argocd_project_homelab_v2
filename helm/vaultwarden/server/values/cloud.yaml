@@ -33,5 +33,5 @@ vaultwarden:
     enabled: true
     accessMode: ReadWriteOnce
     size: 3200Mi
-    storageClass: longhorn-replicated
+    storageClass: longhorn-xfs
     #existingClaim: "bitwarden-pvc"

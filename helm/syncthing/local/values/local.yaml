@@ -18,7 +18,7 @@ syncthing:
   
   persistence:
     enabled: true
-    storageClass: "longhorn-local"
+    storageClass: longhorn-xfs
     accessMode: ReadWriteOnce
     size: 2Gi
     mountPath: /var/syncthing

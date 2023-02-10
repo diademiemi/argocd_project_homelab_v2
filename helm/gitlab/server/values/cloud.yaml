@@ -13,10 +13,7 @@ global:
       secretName: gitlab-wildcard-cert
     configureCertmanager: false
 
-  nodeSelector:
-    location: "cloud"
-
-  storageClass: longhorn-cloud
+  storageClass: longhorn-xfs
 
 gitlab:
   upgradeCheck:
@@ -34,29 +31,23 @@ gitlab:
   gitlab:
     gitaly:
       persistence:
-        storageClass: longhorn-cloud
+        storageClass: longhorn-xfs
 
   postgresql:
     # # The chart is not up to date, the documentation is wrong :)
     # https://github.com/bitnami/charts/blob/09ba1564fed3df4f1d94518edcb58aab1f75c827/bitnami/postgresql/templates/statefulset.yaml
     master:
-      nodeSelector:
-        location: "cloud"
       persistence:
-        storageClass: longhorn-cloud
+        storageClass: longhorn-xfs
 
   minio:
-    nodeSelector:
-      location: "cloud"
     persistence:
-      storageClass: longhorn-cloud
+      storageClass: longhorn-xfs
 
   redis:
     master:
-      nodeSelector:
-        location: "cloud"
       persistence:
-        storageClass: longhorn-cloud
+        storageClass: longhorn-xfs
 
   prometheus:
     install: false
