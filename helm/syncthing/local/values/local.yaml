@@ -12,9 +12,6 @@ syncthing:
     discovery:
       type: NodePort # Change to LoadBalancer if you want to expose the service
       port: 21027
-
-  nodeSelector:
-    location: "local"
   
   persistence:
     enabled: true
