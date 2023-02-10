@@ -14,11 +14,11 @@ spec:
     storage: 2048Gi
   local:
     path: "/mnt/files"
-  # nodeAffinity:
-  #   required:
-  #     nodeSelectorTerms:
-  #       - matchExpressions:
-  #           - key: location
-  #             operator: In
-  #             values:
-  #               - local
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: "k3s.io/hostname"
+              operator: In
+              values:
+                - omori
