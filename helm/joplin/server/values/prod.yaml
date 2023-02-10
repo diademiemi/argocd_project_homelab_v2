@@ -35,5 +35,5 @@ joplin-server:
       enabled: true
       accessMode: ReadWriteOnce
       size: 6400Mi
-      storageClass: longhorn-replicated
+      storageClass: longhorn-replicated-xfs
       mountPath: /var/lib/postgresql/data
