@@ -1,6 +1,6 @@
 dependencies:
 - name: jellyfin
   repository: https://diademiemi.github.io/charts
-  version: 0.1.0
-digest: sha256:8339fb12c903e8596fcac36c5c526081c87571e0e3e4105021d098c54894aba1
-generated: "2023-02-11T18:21:15.149181911+01:00"
+  version: 0.1.1
+digest: sha256:2a70dd575280ed61fd90f8fec44eca7243403d046fb85b3c4a18d5155b59d745
+generated: "2023-02-11T18:33:28.516544655+01:00"
