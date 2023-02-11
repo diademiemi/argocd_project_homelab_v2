@@ -31,7 +31,8 @@ vaultwarden:
 
   persistence:
     enabled: true
+    storageClass: "longhorn-xfs"
     accessMode: ReadWriteOnce
     size: 3200Mi
-    storageClass: longhorn-xfs
-    #existingClaim: "bitwarden-pvc"
+    mountPath: /data
+    extraVolumes: []

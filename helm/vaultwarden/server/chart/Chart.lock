@@ -1,6 +1,6 @@
 dependencies:
 - name: vaultwarden
-  repository: https://constin.github.io/vaultwarden-helm/
-  version: 0.1.7
-digest: sha256:e6a72e95686a8a45513187d98cebbe36bdbd01913db16acfa754bf9aad95cd48
-generated: "2023-01-29T01:17:02.452309355+01:00"
+  repository: https://diademiemi.github.io/charts
+  version: 0.1.0
+digest: sha256:cc65d5600ccfc8c450d28e6e2811ff0e4b5a3fddeb30cc6392f0ab3f986b851c
+generated: "2023-02-11T14:09:07.825652981+01:00"
