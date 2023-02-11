@@ -1,0 +1,41 @@
+jellyfin:
+  service:
+    web:
+      type: ClusterIP
+      port: 8096
+      targetPort: 8096
+    dlna:
+      type: LoadBalancer
+      port: 1900
+      targetPort: 1900 # udp
+      externalTrafficPolicy: Local
+  ingress:
+    enabled: true # Uses service.web
+    className: "traefik"
+    annotations:
+      kubernetes.io/ingress.class: traefik
+    hosts:
+      - host: media.blahaj.sh
+        paths:
+          - path: /
+            pathType: Prefix
+    tls: []
+
+  persistence:
+    enabled: true
+    storageClass: longhorn-xfs
+    accessMode: ReadWriteOnce
+    size: 4Gi
+    mountPath: /config
+    extraVolumes:
+      - name: cache
+        storageClass: longhorn-xfs
+        size: 4Gi
+        accessMode: ReadWriteOnce
+        mountPath: /cache
+      - name: media 
+        existingClaim: "media"
+        mountPath: /mnt/media
+      - name: music 
+        existingClaim: "music"
+        mountPath: /mnt/files/Music
