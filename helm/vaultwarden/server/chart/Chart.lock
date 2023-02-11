@@ -1,6 +1,6 @@
 dependencies:
 - name: vaultwarden
   repository: https://diademiemi.github.io/charts
-  version: 0.1.0
-digest: sha256:cc65d5600ccfc8c450d28e6e2811ff0e4b5a3fddeb30cc6392f0ab3f986b851c
-generated: "2023-02-11T14:09:07.825652981+01:00"
+  version: 0.1.1
+digest: sha256:719e5ad2d6ef389650d632fb77ad04018a747c0757c1dd8e916e7b052fb2bbd7
+generated: "2023-02-11T19:01:26.885142987+01:00"
