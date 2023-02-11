@@ -34,6 +34,6 @@ vaultwarden:
     enabled: true
     storageClass: "longhorn-xfs"
     accessMode: ReadWriteOnce
-    size: 3200Mi
+    size: 32000Mi
     mountPath: /data
     extraVolumes: []
