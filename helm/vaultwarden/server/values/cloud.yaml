@@ -16,18 +16,19 @@ vaultwarden:
   ingress:
     enabled: true
     annotations:
-      kubernetes.io/ingress.class: traefik
-      kubernetes.io/tls-acme: "false"
-      traefik.ingress.kubernetes.io/router.entrypoints: websecure
-      traefik.ingress.kubernetes.io/router.tls: "true"
-    path: /
+        kubernetes.io/ingress.class: traefik
+        kubernetes.io/tls-acme: "false"
+        traefik.ingress.kubernetes.io/router.entrypoints: websecure
+        traefik.ingress.kubernetes.io/router.tls: "true"
     hosts:
-      - vault.blahaj.sh
+      - host: vault.blahaj.sh
+        paths:
+          - path: /
+            pathType: Prefix
     tls:
-      - secretName: vaultwarden-blahaj-cert
-        hosts:
-          - vault.blahaj.sh
-    pathType: Prefix
+    - secretName: vaultwarden-blahaj-cert
+      hosts:
+        - vault.blahaj.sh
 
   persistence:
     enabled: true
