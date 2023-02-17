@@ -33,7 +33,7 @@ metadata:
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
     traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
-  ingressClassName: traefik
+  ingressClassName: helm-traefik-ingress
   rules:
   - host: home.blahaj.sh
     http:
