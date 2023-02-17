@@ -4,7 +4,7 @@ global:
   hosts:
     domain: blahaj.sh
   ingress:
-    class: traefik
+    class: helm-traefik-ingress
     enabled: true
     annotations:
       traefik.ingress.kubernetes.io/router.entrypoints: websecure
